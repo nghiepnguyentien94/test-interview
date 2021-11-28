@@ -1,0 +1,47 @@
+main {
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #666;
+  font-size: 4em;
+  font-weight: 100;
+}
+
+table {
+  table-layout: fixed;
+  border: solid 1px #777;
+  width: 100%;
+  text-align: left;
+}
+th,
+td {
+  border: solid 1px #777;
+  padding: 5px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 34px;
+  box-sizing: border-box;
+}
+th:nth-child(1) {
+    width: 20%;
+}
+th:nth-child(2) {
+    width: 60%;
+}
+th:nth-child(3) {
+    width: 100px;
+}
+th:nth-child(4) {
+    width: 100px;
+}
+
+tbody:nth-child(even) {
+  background-color: #ddd;
+}
+.align-right {
+  text-align: right;
+}
