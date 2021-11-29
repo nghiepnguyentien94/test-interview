@@ -11,7 +11,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {       
-        getOrders(process.env.REACT_APP_API_URL,process.env.NODE_ENV).then(res=>{
+        getOrders(process.env.REACT_APP_API_URL,process.env.REACT_APP_MODE).then(res=>{
             if(res.data){
                 this.setState({ orders :res.data.orders});
             }
@@ -25,7 +25,6 @@ class App extends React.Component {
     }
 
     render() {
-        console.log(process.env);
         return (
             <main>
                 <h1>注文一覧</h1>
