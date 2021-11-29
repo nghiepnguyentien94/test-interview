@@ -2,7 +2,7 @@ export default {
     "data":{
         "orders": [
             {
-                "id": 4216043012249,
+                "id": "4216043012249-fake",
                 "admin_graphql_api_id": "gid:\/\/shopify\/Order\/4216043012249",
                 "app_id": 1354745,
                 "browser_ip": null,
