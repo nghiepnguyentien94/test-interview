@@ -1,8 +1,12 @@
-Test Interview
+# Test Interview
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install` 
+
+Install library to run project
 
 ### `npm start`
 
