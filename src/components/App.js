@@ -3,14 +3,19 @@ import axios from "axios";
 import Order from "./Order";
 import fakeData from "../fake-data";
 import '../css/app.css';
+import getOrders from "../utils/getOrders";
+
 class App extends React.Component {
     state = {
         orders: [] // all ordered orders
     }
 
-    componentDidMount() {
-        let orders = fakeData;
-        this.setState({ orders });
+    componentDidMount() {       
+        getOrders("url",process.env.NODE_ENV).then(res=>{
+            if(res.data){
+                this.setState({ orders :res.data.orders});
+            }
+        })   
     }
 
     renderOrder = (orders)=>{
@@ -20,6 +25,7 @@ class App extends React.Component {
     }
 
     render() {
+        console.log(process.env);
         return (
             <main>
                 <h1>注文一覧</h1>

@@ -7,17 +7,17 @@ class Order extends React.Component {
         return items.map((item, index) => {
             if (index === 0) { // Merge order's item rows if it is the 1st row of a order
                 return (
-                    <tr>
+                    <tr key={index}>
                         <td rowSpan={items.length}>
                             {this.props.order.id}
                         </td>
-                        <Item item={item} key={index} />
+                        <Item item={item} />
                     </tr>
                 )
             } else {
                 return (
-                    <tr>
-                        <Item item={item} key={index} />
+                    <tr  key={index}>
+                        <Item item={item}/>
                     </tr>
                 )
             }
